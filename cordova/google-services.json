@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "578350226106",
+    "firebase_url": "https://push-notify-63e08.firebaseio.com",
+    "project_id": "push-notify-63e08",
+    "storage_bucket": "push-notify-63e08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578350226106:android:93fda1b335dee217a18083",
+        "android_client_info": {
+          "package_name": "com.geektic.ethan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578350226106-6a9tiidkflfba17gld8so5ghvjub8f99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBflp2iixWxSOQEQv_0TPoHeWkbBkxWH4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578350226106-6a9tiidkflfba17gld8so5ghvjub8f99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
