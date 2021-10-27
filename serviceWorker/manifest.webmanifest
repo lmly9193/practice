@@ -1,0 +1,20 @@
+{
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "description": "這裡填寫描述。",
+    "display": "fullscreen",
+    "icons": [{
+            "src": "icon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "name": "Service Worker 範例",
+    "short_name": "SW Demo",
+    "start_url": "/index.html"
+}
