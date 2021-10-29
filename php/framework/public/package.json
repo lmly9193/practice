@@ -1,0 +1,25 @@
+{
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "animate.css": "^3.7.2",
+    "aos": "^2.3.4",
+    "autonumeric": "^4.5.13",
+    "bootstrap": "^4.4.1",
+    "c3": "^0.7.13",
+    "chart.js": "^2.9.3",
+    "d3": "^5.15.0",
+    "dropzone": "^5.7.0",
+    "flat-ui": "^2.1.1",
+    "jquery": "^3.4.1",
+    "jquery-twzipcode": "^1.7.15-rc1",
+    "jquery.qrcode": "^1.0.3",
+    "materialize-css": "^1.0.0",
+    "moment": "^2.24.0",
+    "parsleyjs": "^2.9.2",
+    "popper.js": "^1.16.1",
+    "qrcodejs": "^1.0.0",
+    "requirejs": "^2.3.6",
+    "tiny-slider": "^2.9.2"
+  }
+}

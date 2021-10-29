@@ -1,0 +1,5 @@
+# framework\.gitignore
+composer.phar
+composer.lock
+public/node_modules/*
+vendor/*

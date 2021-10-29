@@ -1,0 +1,8 @@
+{
+    "name": "ethan/framework",
+    "require": {
+        "maximebf/debugbar": "^1.16",
+        "sunra/php-simple-html-dom-parser": "^1.5",
+        "phpmailer/phpmailer": "^6.1"
+    }
+}
