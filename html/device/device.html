@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-Hant">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Detect Device Example</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@1.0.2/src/ua-parser.min.js"></script>
+    <script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Network</h1>
+    <pre id="ipinfo"></pre>
+
+    <h1>Device</h1>
+    <p>UserAgent: <span id="ua">Unknown</span></p>
+    <p>Device Type: <span id="device-type">Unknown</span></p>
+    <p>Device OS: <span id="device-os">Unknown</span></p>
+    <p>Device Orientation: <span id="device-orientation">Unknown</span></p>
+
+    <script>
+        var UAParser = new UAParser();
+        UAParser = UAParser.getResult();
+        $(document).ready(function() {
+            $('#ua').text(UAParser.ua);
+            $('#device-type').text(device.type);
+            $('#device-os').text(device.os);
+            $('#device-orientation').text(device.orientation);
+
+            $.getJSON("https://iplist.cc/api", response => {
+                $('#ipinfo').text(JSON.stringify(response, undefined, 2));
+            });
+
+        });
+    </script>
+</body>
+
+</html>

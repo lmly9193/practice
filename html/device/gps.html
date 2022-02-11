@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-Hant">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Geolocation Example</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>GPS</h1>
+    <button type="button" onClick="chkGPS()">CHECK Feature</button>
+    <p>Loaction Feature: <span id="feature">Unknown</span></p>
+    <p>GPS info: <span id="info">Unknown</span></p>
+    <p id="map"></p>
+
+    <script>
+        $(document).ready(function() {
+
+            chkGPS();
+
+        });
+
+        function chkGPS() {
+
+            if (!navigator.geolocation) {
+                $('#feature').text("Unavailable");
+                $("#info").html("Geolocation is not supported by this browser.");
+            } else {
+                $('#feature').text("Available");
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        let latitude = position.coords.latitude;
+                        let longitude = position.coords.longitude;
+                        let src = "https://www.google.com/maps?q=" + latitude + "," + longitude + "&hl=zh-TW&z=18&output=embed";
+
+                        $('#info').text("Latitude: " + latitude + " Longitude: " + longitude);
+                        $('#map').html('<iframe src="' + src + '" width="600" height="450" style="border:0;" loading="lazy" allowfullscreen></iframe>');
+                    },
+                    (error) => {
+                        console.log('navigator.geolocation.getCurrentPosition() error: ', error.message);
+                        $("#info").html('Please check geolocation permission is grant.');
+
+                    });
+            }
+        }
+    </script>
+</body>
+
+</html>
