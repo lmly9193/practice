@@ -1,0 +1,6 @@
+[submodule "git/gitattributes"]
+	path = git/gitattributes
+	url = https://github.com/alexkaratarakis/gitattributes.git
+[submodule "git/gitignore"]
+	path = git/gitignore
+	url = https://github.com/github/gitignore.git
