@@ -1,0 +1,90 @@
+<!-- https://developer.jwplayer.com/jwplayer/docs/jw8-player-configuration-reference -->
+
+<div id="myElement">LOADING...</div>
+<script>
+    var playerInstance = jwplayer("myElement");
+    playerInstance.setup({
+        //Meta
+        playlist: [{
+            sources: [{
+                "label": "1080",
+                "type": "video/mp4",
+                "file": "1080url"
+            }, {
+                "label": "720",
+                "type": "video/mp4",
+                "file": "720url"
+            }],
+            image: "Picurl 1",
+            title: "TITLE 1",
+            description: "DESCRIPTION 1",
+            mediaid: "MEDIAID 1"
+        }, {
+            sources: [{
+                "label": "BD",
+                "type": "video/mp4",
+                "file": "BDurl"
+            }, {
+                "label": "HD",
+                "type": "video/mp4",
+                "file": "HDurl"
+            }],
+            image: "Picurl 2",
+            title: "TITLE 2",
+            description: "DESCRIPTION 2",
+            mediaid: "MEDIAID 2"
+        }],
+
+        //Behavior
+        mute: "false", //是否靜音
+        autostart: "false",
+        nextupoffset: "-10", //下則資訊顯示時機
+        repeat: "false",
+        abouttext: "TEXT",
+        aboutlink: "ABOUTurl",
+
+        //Appearance
+        controls: "true",
+        localization: {
+            nextUp: "接下來",
+            playlist: "影片清單"
+        },
+        height: "100%",
+        width: "100%",
+        displaytitle: "true",
+        displaydescription: "true",
+        timesliderabove: "true",
+
+        //Rendering and Loading
+        primary: "html5", //default:"html5" or "flash"
+        flashplayer: "jwplayer/jwplayer.flash.swf",
+        base: "/", //Configures an alternate base path for skins and providers
+        preload: "metadata", //"auto","none","metadata"
+
+        //Skin
+        skin: {
+            name: "seven",
+            active: "red",
+            inactive: "white",
+            background: "black",
+            url: "extSkinurl"
+        },
+
+        //Logo
+        logo: {
+            file: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAADdAAAA3QFwU6IHAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAL1QTFRF////AAAAAAAAAAAAAAAABgAABwAABAAAAgAAHQEBJAEBAAAAAwEBBgAABgMDBwUFDgsLEAsLEQEBEQsLEwEBGBMTGBQUHwcHKQcHKygoNQYGPjg4Pzw8TQgIVVJSWQMDYwMDZgQEcAQEcgQEcwQEdAQEfAQEiwUFjIyMkgUFkwUFlgUFmQUFoAUFo6OjpQUFsAYGuQYGvAYGwAYGwgYGzAcH0QcH0tLS0wcH1AcH1QcH4eHh7e3t/v7+////506o6gAAAAt0Uk5TAAMQKSy4w/L5/f2Ug/EpAAAArklEQVQ4y72TxxKCMBBAF2mB2HsviCjYxQZq/v+znHhzJLsHR981byZlXwD+gpZToL2WDYtxBcwyAHTmBmsFgct0MJ0kVZI4Jth+iuDbwENMCPmb4HknVIhqjdYWE8a9+zA/OWOCEJtye4cK4tYvzq6YIB6LUjfGBCEuncFXArUFdUjimsRDRZUm/tTksLLH/RlMXC9IqofRVAaTkdxqLlmm+6NMjoyWzJ7+OD/nCQkviYvQ3qcwAAAAAElFTkSuQmCC",
+            hide: "false",
+            link: "url",
+            margin: "8",
+            position: "top-left" //default:"top-right" or "top-left","bottom-left","bottom-right"
+        },
+
+        //Sharing
+        sharing: {
+            heading: "分享",
+            link: "url",
+            code: "<iframe src='url' width='480' height='270' frameborder='0' scrolling='auto'></iframe>",
+            sites: ["facebook", "twitter", "tumblr", "googleplus", "reddit", "linkedin", "interest", "email"]
+        }
+    });
+</script>
